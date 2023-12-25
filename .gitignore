@@ -1,0 +1,6 @@
+.next
+node_modules
+.vercel
+.DS_Store
+.contentlayer
+public/feed.xml
