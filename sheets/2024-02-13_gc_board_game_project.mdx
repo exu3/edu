@@ -1,0 +1,130 @@
+# Game Project
+
+In essence, the task for this project is to design and fabricate a board game in which we apply our AutoCAD and SolidWorks skills. After some individual and group brainstorming, we wrote up a README for our game idea.
+
+## Materials
+
+Raw materials:
+
+- 8 sheets of 1/8"x12"12" sheets of plywood (provided by The University)
+- paper for printing stuff
+
+## Idea
+
+With the ideas of simplicity, skill expression, and flavor in mind, this game is a playoff of existing games—poker and poker-adjacent games. In [Balatro](https://store.steampowered.com/app/2379780/Balatro/), a singleplayer poker-inspired roguelike, the player progresses through a series of bosses by making poker hands, which are scored with a points system. The player must reach a certain amount of points in 4 hands to progress to the next boss. Shops in between bosses allow the player to buy “Jokers” which make it easier to make certain hands (e.g. “Straights and Flushes can be made with 4 cards instead of 5”) or to score more points (e.g. “Gain +30 points for each even-numbered card you play”). In Balatro, the player may also add, remove, or modify cards in the deck; however, it would be very difficult to implement this in a physical game. Points would be tedious to calculate in real time without a computer program, and being a multiplayer board game, it would make sense to adopt the betting procedure already created by poker.
+
+In our game, the players will each be randomly dealt 2 Modifier cards (equiavlent to "Jokers" in Balatro), the effects of which only affect the player who possesses them. Players would be able to bet on how likely they are to win the round, just like in [Texas hold ’em](https://en.wikipedia.org/wiki/Texas_hold_%27em). Players would not have numbered cards to themselves, just their modifiers, and 7 cards will be dealt in the middle for the lack of individual cards. Players must choose their best 5 cards out of the 7 (no three pairs, 6 card flushes, etc). Cards will be dealt by 5 in the first turn, then 1, then 1 final card. Players will place wagers after being dealt their initial modifiers, then after each set of cards is dealt. The player to the left of the dealer makes the first bet. Then each player afterwards must do one of the following:
+
+- match the bet
+- fold their hand to give up on the rest of this round
+- raise the bet
+
+If the bet is raised, the cycle repeats until all players either have the same amount of chips in the pot or have folded. All chips in the pot are given to the winner, or evenly split between the winners if two or more players tie. If a player wins all of the chips in the game, the game is over and that player wins.
+
+At the beginning of each game, a recipe card will be revealed. The recipe card is selected at random. The recipe determines the ingredients necessary to brew a specific potion. Players can be rewarded with a specified number of random ingredients when certain events occur. If the hand counts as a certain rarity of hand, the player(s) who win(s) will be rewarded with the ability to draw a certain number of ingredient chips from a bag. For example, Four of a Kind might yield 5 ingredients compared to Three of a Kind giving two ingredients. If a player acquires all the ingredients indicated in the recipe to brew the potion, the game is over and that player wins.
+
+## Box
+
+The box in which the game pieces will be enclosed for storage will use 4 sheets of 1/8”x12”x12” plywood. Inside the box, there will be dividers to separate the various components of the game. We will either use laser cut wood pieces that go into slots in the box if material allows. Or, we will use SolidWorks to model plastic dividers/trays.
+
+## Game pieces
+
+For the face cards, we will use a standard 52-card deck. The chips (for betting) will come from a poker set that Stephen owns. There will be 6 different recipe cards, laser engraved 1/8"x2.5"x3.5" plywood. Ingredients will be engraved onto laser cut 1/8"x1.5"x1.5" wood tokens. The modifier cards will be digitally illustrated, printed, and laminated (will consider laser cutting these if time and resources permit.) The game board is described below.
+
+Figure 3. The Game Board Setup
+
+Players would each put their chips toward the center of the table to indicate their bets, modifiers will still be player specific, although the number of modifier cards per player will have to be determined through playtesting, and the unused ones will remain in the middle of the table as shown, so they can be grabbed/shuffled easily. Cards will be dealt in the middle of the table, so everyone can see.
+
+## Example Hand
+
+##### Round Setup:
+
+2 Player Game.
+Player 1 is dealt a Modifier: "Straights and flushes can be made with 4 cards instead of 5".
+Player 2 gets a Modifier: "This counts as any one non-face card in any suit."
+
+##### Betting Round 1:
+
+Player 1 bets 3 chips.
+Player 2 calls (matches current bet), bringing the pot to 6 chips
+
+##### Card Distribution:
+
+5 community cards are drawn: 5♥️, 6♣️, 7♣️, 7♠️, J♠️.
+
+##### Player 1's Decision:
+
+Player 1 has a pair on the board but is 1 card away from making a straight.
+Player 1 checks (bets 0 chips), hoping for another card.
+
+##### Player 2's Hand:
+
+Player 2 now has 3 of a kind, using the modifier as another 7.
+
+##### Betting Round 2:
+
+Player 2 bets 10 chips to pressure Player 1.
+Player 1 calls, increasing the pot to 26 chips.
+
+##### Community Card Reveal:
+
+The next card is the 8♦️.
+
+##### Player 1's Turn:
+
+Player 1 bets another 10 chips, completing a straight.
+
+##### Player 2's Decision:
+
+Player 2 realizes Player 1's likely lead and decides to fold.
+
+##### Outcome:
+
+Player 1 wins the pot of 26 chips, 2 ingredients for completing a straight, and Player 2's 13 chips.
+
+## Jargon
+
+Some poker jargon for first-timers.
+
+- High Card: When no other hand combination is made, the highest card wins.
+- Pair: Two cards of the same rank.
+- Two Pair: Two sets of pairs.
+- Three of a Kind (Trips): Three cards of the same rank.
+- Straight: Five consecutive cards of any suit.
+- Flush: Five cards of the same suit, not in sequence.
+- Full House: Three cards of one rank and two cards of another rank.
+- Four of a Kind (Quads): Four cards of the same rank.
+- Straight Flush: Five consecutive cards of the same suit.
+- Royal Flush: A straight flush from 10 to Ace.
+
+##### Betting:
+
+- Bet: Placing chips into the pot.
+- Raise: Increasing the size of the current bet.
+- Call: Matching the current bet.
+- Fold: Discarding your hand and forfeiting any chance of winning the pot.
+- Check: Declining to bet when no one else has bet in the current betting round.
+- All-In: Betting all of your chips.
+
+##### Table positions (more or less relevant to our game?):
+
+- Button: The player who acts last in betting rounds, considered the most advantageous position.
+- Small Blind: The player seated two positions left of the dealer, forced to bet a small amount - before receiving cards.
+- Big Blind: The player seated one position left of the dealer, forced to bet a larger amount before receiving cards.
+- Early Position: Players seated closest to the left of the big blind, typically considered disadvantageous.
+- Middle Position: Players seated between early and late positions.
+- Late Position: Players seated closest to the right of the dealer, considered advantageous.
+
+##### Community cards (marginal importance to game):
+
+- Flop: The first three community cards dealt face-up on the table.
+- Turn: The fourth community card dealt after the flop.
+- River: The fifth and final community card dealt after the turn.
+
+##### Miscellaneous Terms:
+
+- Pot Odds: The ratio of the current size of the pot to the size of the bet you must call.
+- Expected Value (EV): The average value you expect to win or lose from a bet or decision.
+- Bluff: Betting or raising with a weak hand to try to make opponents fold stronger hands.
+- Tilt: Emotional frustration that leads to suboptimal decision-making.
+- Drawing Dead: Having no chance of winning a hand regardless of which cards come on later streets.
