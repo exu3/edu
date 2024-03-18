@@ -2,110 +2,58 @@
 
 ### Engineering problem statement
 
-- to land American astronauts on the moon and return them safely to Earth
+To land American astronauts on the moon and return them safely to Earth.
 
-### Quick Background
+### Background
 
-- first crewed mission of the Apollo program, which aimed to land astronauts on the Moon and return them safely to Earth
-- scheduled to launch on February 21, 1967
-- crew consisted of three experienced astronauts: Virgil "Gus" Grissom, Edward H. White II, and Roger B. Chaffee
+Apollo 1 was planned to be the first crewed mission of the Apollo program which aimed to land astronauts on the moon and return them safely to Earth. Apollo 1 was scheduled to launch of February 21, 1967. The crew consisted of three astronauts: Virgil "Gus" Grissom, Edward H. White II, and Roger B. Chaffee.
 
-### Detailed technical description of design solution
+### Plugs-out test
 
-Single (oxygen) vs two gas (oxygen and nitrogen) design
+On Jan 27, 1967, the Cape Kennedy Air Force Station was the site for the "plugs out" test. This was a test of the vehicle to see how it performs under internal power, without conecting the ship to off-board power. This was considered safe because pryotechnic systems were not armed, and the rocket was not fueled. There were a lot of mishaps during this test.
 
-- Decided to go with 100% oxygen atmosphere
-- Two gas design with tanks and all would add 500 lbs of extra weight
-- Con: Physiological issues associated with pure oxy environment - eye irritation, hearing effects, clogged chest
-- increased fire hazard with pure oxygen environment
-- one gas design successfully used on Mercury and Gemini missions with no fire incident
+At 1pm, the crew climbed into the capsule and was strapped into their seats. Shortly after, Grissom reported a foul odor coming from his suit. After some investigation, the cause of the odor was not identified, but they proceeded with the operation. The next step was to close the complicated, 3 layer hatch, and the air in the cockpit was replaced with pure oxygen, pressurized to 16.7 psi, to drive out atmospheric air and seal the plug door.
 
-Hatch design
+### Single gas vs mixed gas design
 
-- Prev hatch design used explosive bolts. This one had \_\_ bolts and opened inwards. Pressure buildup inside the cabin create massive forces against openeing the door
-  - Difficult to egress
+When designing the spacecraft, engineers weighed the pros and cons of using a pure oxygen environment vs a mix of nitrogen and oxygen, which would be more similar to the atmostphere on earth. They ended up going with the single gas design because weight was a huge consideration spaceflight. A two gas design, with tanks and all the associated plumbing/hardware would add 500lbs of extra weight. With the pure oxygen environment, there would also be an increased fire hazard which would become a signifcant issue.
 
-Flammable materials
+### Hatch design
 
-- Velcro
-- Horizontal flame test
-- 100% oxygen
+The hatch design on this spacecraft was different from previous iterations. The hatch consisted of three layers: a removable inner hatch which stayed inside the cabin; a hinged outer hatch that was part of the heat shield, and an outer hatch cover. The hatch seals itself by taking advantage of a pressure difference established across its two sides. The wedge shaped door is forced into a socket and forms a seal that prevents it from being opened until the cabin pressure is released. In previous designs, explosive bolts were used so that the hatch door could be quickly ejected in the event of an emergency. In this design, engineers opted out of using explosive bolts for fear that the door might open accidentally. This happened on a previous Mercury flight when the hatch blew off when the Liberty Bell spacecraft landed in the ocean.
 
-### The primary cause, or sequence of events, leading to failure
+After closing the hatch, they proceeded with testing. All afternoon, there were communication problems, and at 6:30pm, the countdown remained on hold. During this time Grissom said "How are we going to get to the moon if we can’t talk between 3 buildings?"
 
-- Budget and schedule pressures
-  - President Kennedy’s challenge of landing a person on the moon before 1970 fostered an environment where people push themselves with high stakes and high risk to meet a set goal
-  - National pressure from post Cold War
-  - NAA under scrutiny and criticism from NASA due to cost overruns and schedule delays in years leading up to Apollo 1
-- Emergency preparedness
-  - Inadequate provisions onsite for emergency response / medical rescue in event of emergency
+### Fire risk
 
-#### Recount of events
+At 6:30pm engineers detected a power surge that caused a short circuit, very likely sparked by a chafed wire below Grissom's seat, and a possible malfunction in wire insulation. The initial source of fuel was likely the polyethylene tubing covering the wires, and then spread to the leg rests, seats, and Velcro hooks. There were a lot of flammable materials in the cabin.
 
-- On Jan 27, 1967, the Cape Kennedy Air Force Station Launch Complex 34A was the site for the "plugs out" test. This was a test of the vehicle to see how it performs under internal power, without conecting the ship to off-board power. This was considered safe because pryotechnic systems were not armed, and the rocket was not fueled.
-- 1pm: Crew climbs into capsule and strapped into their seats
-- shortly after - foul odor from Grissom's suit. Engineers could not identify a cause for the odor but proceeded with operation, closing the complicated 3 layer hatch
-- The air in the cockpit was replaced by pure oxygen pressurized to 16.7 psi, to drive out atmospheric air and to seal the plug door.
+The astronuats struggled to open to hatch to get out of the cabin. The air pressure from the fire made it very difficult to open the hatch, and the complicated design would take too long to open.
 
-  - How the door works: it seals itself by taking advantage of a pressure difference established across its two sides. The wedge shaped door forced into socket and forms seal that prevents it from being opened until cabin pressure is released
+At 6:31pm, the pressure inside reached 29 psi and burst the inner wall of the spacecraft, allowing ambient air tinto the cabin. Ground controllers were able to open the hatch by 6:36pm, and it took 7 and a half hours after the fire to remove the astronauts' bodies. The nylon space suits and life support hoses were melted and the bodies were fused to the interior of the cockpit.
 
-- communication problems all afternoon, and at 6:30pm the countdown remained on hold
+### Primary cause of failure
 
-  - “How are we going to get to the moon if we can’t talk between 3 buildings” - Grissom
+Ultimately, the fire was caused by electric short, propagated by flammable materials inside the cabin and pure oxygen atmosphere, and was contained by the heavy hatch. Leading up to this, budget and schedule pressures imposed upon people workin on this project may have led to oversight on important design considerations. President Kennedy's challenge for landing a person on the moon before 1970 fostered an environment where people push themsleves in a high stakes, high risk environment to meet a certain goal. Additionally, there was inadequate onsite provisions for emergency response or medical rescue in case something went wrong during the test.
 
-- At 6:30pm, engineers detected a power surge that caused a short circuit, very likely sparked by a chafed wire below Grissom's seat. Possible malfunction in wire insulation. The initial source of fuel was likely the polyetheylyen tubing covering the wires, and then spread to the leg rests, seats, and velcro hooks. There were a lot of flammable materials in the cabin.
-- Hatch design too complicated to egress the crew quickly in emergencies. The astronauts struggled to open to main hatch.
-  - In the Mercury spacecraft which preceded the Apollo program, the hatch used explosive bolts so they could be easily opened in an emergency. For the Apollo spacecraft, engineers decided to omit the explosive hatch because during a previous Mercury mission, the hatch blew unexpectedly after a splashdown landing[^1]
-- At 6:31pm, the pressure inside reached 29 psi and burst the inner wall of the CM, allowing ambient air tinto the cabin.
+### Consequences
 
-- Ground controllers were able to open the hatch by 6:36pm, and it took 7 and a half hours after the fire to remove the astronauts' bodies. The nylon space suits and life support hoses were melted and the bodies were fused to the interior of the cockpit.
+In terms of engineering, this tragedy prompted NASA to reasses their engineering practices, revise flawed designs, testing procedures, and safety measures. Engineers scrutizined the Apollo 1 spacecraft design to identify hazards and improve safety features to improve safety and reliability. Following Apollo 1, there was a greater emphasis of safety in engineering, emphasizing the need for thorough testing, risk assessment, and safety standards in aerospace engineering.
 
-### Consequences, in terms of engineers, society, business, and the environment
+In society, this promoted greater public awareness about dangers, risks, challenges, and sacrifices associated with manned space missions. This also prompted increased government oversight and regulation of space exploration programs to ensure safety of astronauts and the public while working towards space exploration goals.
 
-Engineering:
+In terms of business, NASA faced significant financial losses. Investigations and redesigining the spacecraft put delays in the Apollo program schedule. Stricter industry safety/testing/design standards for the field in general.
 
-- safety: underscored need for stringent safety protocols in design and testing
-- safety: prompted NASA to reassess engineering practices, revise spacecraft designs, testing procedures, and safety measures
-- design improvements: scrutinized Apollo 1 spacecraft design to identify hazards and improve safety features to improve crew safety and reliability
-- eng culture: brought a culture of safety in engineering, emphasizing need for through testing, risk assessment and safety standards in aerospace engineering
+### Corrective actions
 
-Society:
-
-- public awareness: raise awareness about dangers and risks, challenges, sacrifies associated with manned space missions
-- government oversight: prompted increased government oversight and regulation of space exploration programs to ensure safety of astronauts and the public while working towards space exploration goals
-
-Business:
-
-- finanical imlplicatons: siginificant financial losses for NASA - investigation/redesign/delays in Apollo program schedule
-- industry standards: prompted stricter industry safety/testing/design standards for the field in general
-
-### Corrective actions in order to prevent similar disasters in the future.
-
-- cultural shift towards safety
-  - establishment of independent review boards and oversight committees to evaluate spacecraft design, testing procedures, and safety measures
-- redesign
-  - CM: replacing flammable materials with more fire-resistant alternatives, improving electrical wiring and insulation, making structural modifications to improve crew safety
-  - cabin atmosphere: adoption of non-flammable atmospheres in spacecraft during ground tests and missions
-  - hatch: redesigning the hatch to open outward instead of inward, simplifying the latch mechanism, and incorporating a quick-release mechanism for emergency egress
+Following this incident, there was a greater emphasis towards safety. Independent review boards and oversight committes were established to evaluate spacefraft design, testing procedures, and safety measures. Engineers learned from their mistakes and made modifications to the design. In the command module, flammable materials were replaced with fire-resistant alternatives. Electrical wiring and insulation was improved, and structural modifications were made to improve crew safety. The hatch was redesigned to open outward instead of inward, and a quick release mechanism for emergency escapes.
 
 ---
-
-### ETHICAL IMPLICATIONS
-
-##### Responsible parties:
-
-##### Ethical implications and potential conflicts of interest.
-
-##### Societal implications.
-
-##### The Canons, Rules, and Obligations from the NSPE Code of Ethics pertaining to this case.
-
-##### What has engineering as a profession learned or gained from this tragedy?
 
 ## Sources:
 
 - https://sma.nasa.gov/SignificantIncidents/assets/fire-in-the-cockpit.pdf
 - https://collected.jcu.edu/cgi/viewcontent.cgi?article=1007&context=fac_bib_2019
 - https://www.npr.org/2021/07/22/1019254674/gus-grissom-liberty-bell-mercury-the-right-stuff
-
-[^1]: https://www.npr.org/2021/07/22/1019254674/gus-grissom-liberty-bell-mercury-the-right-stuff
+- https://www.youtube.com/watch?v=fa7bXO9zPXos "How a 'Non-Hazardous' NASA Mission Turned Deadly", Smithsonian Channel
+- https://www.popsci.com/why-did-nasa-still-use-pure-oxygen-after-apollo-1-fire/
