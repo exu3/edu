@@ -1,0 +1,59 @@
+# Manometer Lab
+
+## Introduction/Background
+
+The purpose of this lab exercise was to explore pressure measurement by constructing a simple manometer out of a tube, a balloon and water. Manometers use measurements of displacement to calculate pressure.
+
+## Experimental Set‐Up & Procedure
+
+For this lab, we constructed an open-ended vertical manometer with a tube and a balloon. We filled the tube with water, leaving 5-8” of vertical space on either side of the manometer tube. For each trial, we inflated the balloon (bladder) to an arbitrary size, measured the circumference of the bladder with a piece of string, put it on one end of the manometer tube, and measured the height difference between the two sides of the manometer tube. We repeated these steps until we had a total of thirty data points, swapping out our old balloon for a new one every 10 trials in order to reduce error caused by the balloon stretching.
+
+## Theory
+
+### Deriving an expression for gauge pressure
+
+To show how the gauge pressure can be calculated, we can start with Newton’s 2nd Law. We can substitute mass using the product of density and volume, and the acceleration of the fluid is the acceleration due to gravity.
+
+#$$missing figures weee wooo$$
+
+Recall that pressure is the force divided by the area. If we substitute the equation above into this formula, we get the following.
+
+#$$ missing figures weee wooo $$
+
+We know that the height is the volume divided by the area, so we can plug that into the formula.
+
+#$$missing figures weee wooo$$
+
+This shows that the gauge pressure can be calculated using the formula P = ρgh.
+
+Based on the derived formula, pressure and height are independent of the tube diameter. When the diameter is wider or narrower, the pressure would be the same but applied over a larger or smaller area. Given that pressure is the force per unit area (P = F/A), if P is constant, F would increase as the cross sectional area (A) increases. In practice, some physical factors might affect the relationship of pressure and tube diameter. In narrow tubes, the meniscus might be more curved, introducing inaccuracies in pressure readings.
+
+Other physical considerations with regard to fluid properties:
+
+The density of the fluid, in this case, tap water, can affect the force necessary to move the fluid. A denser fluid would require more force and wouldn’t move as much as a less dense fluid. Another physical attribute to consider is the viscosity of the fluid, a more viscous liquid moves slower and requires more energy to flow.
+
+## Analysis
+
+[figures woo]
+
+The propellant mass decreases by 0.34% per degree Kelvin of increased temperature.
+
+An inclined manometer would be more precise because a larger liquid movement will be produced relative to the graduations on the tube. Because it is angled, there are more graduations per unit of vertical height. The smaller the angle (θ) of the tube, the longer the distance the fluid would travel.
+
+### Uncertainty Quantification & Error Analysis
+
+By assuming that the air in the bladder is in thermal equilibrium with room temperature, the measured pressure may be higher or lower than the actual pressure. If the air in the bladder is colder than the room temperature, the pressure of the gas inside the bladder would also be lower because the ideal gas law states that pressure is proportional to temperature (assuming that volume remains constant).
+
+The order of the error is to the nearest 1/16 inch, the smallest increment on the measuring tape. Because the manometer tube was not fixed in a U-shape, variation in hand positions could have slightly angled the manometer tube and caused the height measurement to not be completely vertical. This error in height measurement would propagate in any calculations of pressure.
+
+To calculate the volume of the balloon, we assumed it was spherical, but the balloon is not a perfect sphere. The percent error associated with this calculation is likely between 5-25% based on the size of the balloon. In smaller balloons, the geometry is more spherical, whereas in fully inflated balloons, the geometry is slightly elliptical and tapered on one end. For instance, for one of the larger balloons we used, the circumference was measured at 29”. Assuming a sphere, the calculated volume is 411.853 cubic inches.
+
+Assuming an ellipsoid, using the radius of the short side, r = 4.615 , and reasonable approximation of long side r = 6, the calculated volume is 535.397 cubic inches. However, this is also inaccurate because the balloon is tapered on the bottom, so the true volume would be less than this.
+
+The percent error in these calculations is 23.07%.
+
+## Conclusion
+
+From the data and graphs pictured above it can be reasonably stated that as bladder volume (the volume of the balloon) increases, there is not a substantial change in the total pressure (atmospheric pressure + gauge pressure).
+
+From the propellant mass vs. bladder volume data, it can be reasonably stated that as bladder volume increases, propellant mass increases proportionally. For every cubic meter of bladder volume added, propellant mass increases by 1235.2 kg. The linear line of best fit is a near perfect match for the data with an R2 value of 0.9999.
