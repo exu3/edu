@@ -1,5 +1,9 @@
 # Forces, Moments and Reactions
 
+### Moments
+
+A moment is a turning force around a fixed pivot. If something is balanced, the moments are equal and opposite. The size of a moment is determined by the force (N) and distance (m). The distance is the perpendicular distance from the pivot to the force.
+
 ### Types of connections and force modeling
 
 A **pin connection** transfers vertical and horizontal shear loads and bending or moments/rotational forces. A bicycle chain is an example of pin connections.
@@ -31,3 +35,24 @@ A release can be thought of as the "anti-support." It is not designed to resist 
 Bridge exxpansion joint.
 
 Internal releases do not transmit the type of force they are designed to release. They allow beams to expand and contract under temperature changes and avoid thermal stress. At a point of release, the force type is zero. Eg. for axial release, N, the internal normal force, = 0
+
+## Support Types and Reactions
+
+### 2D
+
+- smooth surface - one force acting normal to the surface
+- rope/cable - one colinear force acting along the axis of the rope or cable
+- link - one colinear force acting along the axis of the link
+- roller - one force acting normal to the surface on which the roller rests
+- fixed collar - one force acting perpendicular to the sleeve and one moment
+- pin - two force components acting parallel to the coordinate axes
+- fixed - two force components acting parallel to the coordinate axes, and one moment
+
+### 3D
+
+- smooth surface - one force acting normal to the surface
+- rope/cable - one colinear force acting along the axis of the rope or cable
+- roller - one force acting normal to the surface
+- bearing (circular shaft) - two force components acting parallel to the coordinate axes and two moments perpendicular to the axis of the bearing
+- hinge - three force components acting parallel to the coordinate axes and two moments perpendicular to the axis of the bearing
+- fixed - three force components acting parallel to the coordinate axes, and three moments perpendicular to the axis of the bearing
