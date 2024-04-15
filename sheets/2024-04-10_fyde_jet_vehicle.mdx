@@ -2,7 +2,7 @@
 
 ## v0
 
-The vehicle body uses a basic rectangular geometry with tabs on the bottom for axles and finger joints for assembly. The vehicle was designed in OnShape, then exported DXFs of the various faces to edit in AutoCAD. I used AutoCAD to add the finger joints and prepare the file for laser cutting.
+The vehicle body uses a basic rectangular geometry with tabs on the bottom for axles and finger joints for assembly. I modeled the body in OnShape, then exported DXFs of the various faces; I used AutoCAD to add the finger joints and prepare the file for laser cutting.
 
 Vehicle assembly in 3D.
 
@@ -14,17 +14,85 @@ This is the laser cut file for the body.
 
 ## v1 changelog
 
-I used the variable studio feature in OnShape to generate varying sizes of nozzles for testing. We tested using the v0 design and just switched the nozzle.
-
-| Nozzle exit diameter | distance | speed over ?? in |
-| -------------------- | -------- | ---------------- |
-| 15mm                 |          |                  |
-| 12mm                 |          |                  |
-| 10mm                 |          |                  |
-| 5mm                  |          |                  |
-
-For the body, there is now a hole for the nozzle so it sits more securely on the vehicle. The bottom of the vehicle is perforated to reduce weight.
+On the body, there is now a hole for the nozzle so it sits more securely on the vehicle. The bottom of the vehicle is perforated to reduce weight. The holes turned out slightly large for the marbles we are using, so the current solution is to put a sheet of plastic or tape over the holes to prevent marbles from falling through. Because the wood we used was slightly warped, the hole tolerance on one side was a bit tight, so I ended up having to drill it out to allow for the axle to spin more freely.
 
 ![new laser cut file for vehicle body](https://cdn.glitch.global/e9a14532-952f-41d5-a8f2-de28e52b377a/Screenshot%202024-04-10%20at%2017.10.32.png?v=1712783465704)
 
-The wheels now use a spoked design instead of solid to save weight. The wheels also have spacers, so there is less friction when the axles move left and right.
+The wheels now use a spoked design instead of solid to save weight. The wheels also have spacers, so there is less friction when the axles move left and right. At first, we tested the v1 design with 3mm thick wood wheels; however, the wood was slightly warped, and the thin material made it difficult to align and balance the wheels. By chance, I stumbled upon some 6mm acrylic in the scrap bin which I used to cut some wheels, and it ended up working quite well.
+
+On the left in the image below is the v0 wheel design, solid laser cut 3mm wood. To the right is the spoked (v1) design on 3mm wood. The vehicle is pictured with the 6mm acrylic wheels.
+![laser cut wheels](https://cdn.glitch.global/e9a14532-952f-41d5-a8f2-de28e52b377a/IMG_6227.jpg?v=1713141379396)
+
+### stats for the nerds
+
+I used parametric variables in OnShape to generate nozzles with varying exit diameters. We conducted speed trials using each nozzle to determine which one to use in our final design.
+
+For reference:
+
+| nozzle    | exit diameter |
+| --------- | ------------- |
+| L(arge)   | 15mm          |
+| M(edium)  | 12.5mm        |
+| S(mall)   | 10mm          |
+| XS(small) | 5mm           |
+
+In conducting the trials, we kept the circumference of the balloon constant. Although, we eventually realized that perhaps that would not give us the optimal results as different nozzle sizes have different optimal circumferences for optimizing speed. We ruled out the XS nozzle because it seemed to be incapable of reaching a reasonably high velocity. When testing the large nozzle, we noticed that inflating the balloon more caused the vehicle to travel further and with more speed; however, the acceleration took longer as it didn't appear to reach its maximum speed until after it passed the gates. Therefore, we ruled out the large nozzle as well. The medium sized nozzle seemed to reliably produce relatively high speeds within the gates. The small nozzle was a close contender. The average speed of trials conducted with the small nozzle came out to be slightly lower at 1.08 m/s as compared to 1.32 m/s with the medium nozzle. Based on these results, the medium nozzle (12.5mm exit diameter) will be used in our final design.
+
+<details>
+<summary>view data (nozzle vs speed) </summary>
+
+| nozzle | balloon circumference (in) | time to traverse 60" to 135" zone (s) | speed (m/s) |
+| ------ | -------------------------- | ------------------------------------- | ----------- |
+| M      | 29                         | 1.6                                   | 1.190625    |
+| M      | 29                         | 1.5                                   | 1.27        |
+| M      | 29                         | 1.2                                   | 1.5875      |
+| M      | 29                         | 1.18                                  | 1.61440678  |
+| M      | 29                         | 1.76                                  | 1.082386364 |
+| M      | 29                         | 1.7                                   | 1.120588235 |
+| M      | 29                         | 1.36                                  | 1.400735294 |
+| S      | 29                         | 1.9                                   | 1.002631579 |
+| S      | 29                         | 1.8                                   | 1.058333333 |
+| S      | 29                         | 1.5                                   | 1.27        |
+| S      | 29                         | 1.98                                  | 0.962121212 |
+| S      | 29                         | 1.7                                   | 1.120588235 |
+| L      | 29                         | 3.05                                  | 0.624590164 |
+| L      | 33                         | 1.6                                   | 1.190625    |
+| XS     | 29                         | 20                                    | 0.09525     |
+
+Average speed of each nozzle:
+
+| nozzle | avg speed (m/s) |
+| ------ | --------------- |
+| XS     | 0.09525         |
+| S      | 1.082734872     |
+| M      | 1.32374881      |
+| L      | 0.907607582     |
+
+</details>
+
+Using the medium nozzle, we conducted additional tests to find the optimal balloon circumference to produce the highest speed between gates. We inflated the balloon to various sizes ranging from 23.5 inches to 32 inches. The larger we inflated the balloon, the more elliptical it became, so our propellant mass to balloon circumference ratio is likely not proportional. We used a scatter plot to visualize the data collected, and determined that ~30in is the optimal circumference.
+
+![scatter plot showing time to traverse gates vs circumference of balloon](https://cdn.glitch.global/e9a14532-952f-41d5-a8f2-de28e52b377a/Screenshot%202024-04-14%20at%2021.02.23.png?v=1713142954846)
+
+<details>
+<summary>view data (time vs circumference)</summary>
+
+| balloon circumference (in) | time to traverse between gates (s) |
+| -------------------------- | ---------------------------------- |
+| 23.5                       | 4.3                                |
+| 24                         | 3.36                               |
+| 25                         | 1.8                                |
+| 26                         | 2.1                                |
+| 29                         | 1.16                               |
+| 29                         | 1.18                               |
+| 28                         | 1.51                               |
+| 30.5                       | 1.2                                |
+| 29.5                       | 1.26                               |
+| 30                         | 1.3                                |
+| 30                         | 1.18                               |
+| 31                         | 1.38                               |
+| 32                         | 1.56                               |
+| 30                         | 1.34                               |
+| 28.75                      | 1.63                               |
+
+</details>
