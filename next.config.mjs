@@ -13,16 +13,15 @@ const config = withContentlayer({
     domains: ['cdn.glitch.com', 'www.icloud.com'],
   },
   async rewrites() {
+    return []
+  },
+  async redirects() {
     return [
       {
-        source: '/one_day_this_kid',
+        source: '/20240423-engr1020',
         destination:
-          'https://ima-lhyksfx2l-lachlanjc.vercel.app/one_day_this_kid/',
-      },
-      {
-        source: '/imagining_worlds_post_human',
-        destination:
-          'https://ima-lhyksfx2l-lachlanjc.vercel.app/imagining_worlds_post_human/',
+          'https://cdn.glitch.me/e9a14532-952f-41d5-a8f2-de28e52b377a/crude%20potion%20poker%20instructions%20engr1020.mp4?v=1713924318307',
+        permanent: true,
       },
     ]
   },
