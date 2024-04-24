@@ -19,8 +19,7 @@ const config = withContentlayer({
     return [
       {
         source: '/20240423-engr1020',
-        destination:
-          'https://cdn.glitch.me/e9a14532-952f-41d5-a8f2-de28e52b377a/crude%20potion%20poker%20instructions%20engr1020.mp4?v=1713924318307',
+        destination: 'https://www.youtube.com/watch?v=pwBlMwo_roQ',
         permanent: true,
       },
     ]
