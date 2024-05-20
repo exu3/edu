@@ -1,0 +1,89 @@
+# Game Project: Potion Poker
+
+## Abstract
+
+Potion Poker is a card game combining elements of traditional poker with a potion-brewing theme. Through collaborative brainstorming, the game aimed to embody simplicity, strategy, and flavor. Drawing inspiration from established games like poker and Balatro, Potion Poker's gameplay revolves around crafting poker hands to progress to craft potions. Each player receives modifier cards which influence gameplay dynamics, creating a strategy element similar to Texas hold 'em. The objective of the game is to accumulate chips or gather ingredients to brew potions. Game components we designed, mostly fabricated using laser cutting, include custom modifier cards, ingredient cards, and recipe cards. Playtesting revealed opportunities for balancing prior familiarity with game mechanics and improving the perceived originality of the game.
+
+## background
+
+Our initial game concept came about as a combination of ideas from group members. With the ideas of simplicity, skill expression, and flavor in mind, the group decided to play off of some preexisting games: poker and a single-player poker roguelike called Balatro. In Balatro, the player progresses through a series of bosses by making poker hands, which are scored with a points system. The player must reach a certain amount of points in 4 hands to progress to the next boss. Shops in between bosses allow the player to buy “Jokers” which make it easier to make certain hands (e.g. “Straights and Flushes can be made with 4 cards instead of 5”) or to score more points (e.g. “Gain +30 points for each even-numbered card you play”). The player may also add, remove, or modify cards in the deck, but as this will be a physical game, it would be very difficult to implement this. Points would be tedious to calculate in real time without a computer program to do it for you, so we decided to follow the betting procedure used by poker and implement a reward system using potions.
+
+In our game, Potion Poker, players are each dealt 1 modifier card (equivalent to Jokers in Balatro), the effects of which only affect the player who holds them. Modifier cards (center left in figure X) can be used to bet on how likely they are to win the round, the same as Texas hold ’em. Players are also dealt 1 playing card in addition to their modifer. During the round, 6 cards are revealed in the middle of the table. Players place wagers after being dealt their initial modifiers, then after each set of cards is dealt. The player to the left of the dealer makes the first bet, then each player afterwards must match the bet, fold their hand to give up on the rest of this round, or raise the bet, in which case, the cycle repeats until all players either have the same amount of chips in the pot or have folded. A winner for the round is determined based on hand rankings. All chips in the pot are given to the winner, or evenly split between the winners if two or more players tie. If a player wins all of the chips in the game or if a player collects the ingredients necessary to craft a potion, the player wins the game.
+
+At the beginning of each round a potion recipe card (center right in figure X) is revealed. The recipe determines the ingredients necessary to brew a specific potion. Players are rewarded with ingredients when they win a round. If a player acquires all the ingredients indicated in the recipe to brew the potion, the game is over and that player wins.
+
+For the game components, we designed custom modifier cards, ingredient cards, and recipe cards which we drew in AutoCAD and fabricated on the laser machine using 1/8" plywood. For the poker chips and playing cards, it seemed more reasonable to use a consumer product instead of fabricating them as one of our group members happened to own a set. The game box was designed with finger joints and laser cut. We considered creating a game board (figure X) but ended up deciding not to fabricate it due to material limitations.
+
+## Documentation
+
+### Gameplay
+
+**Objective**: The goal in Potion Poker is to maintain poker chips and acquire ingredients to craft specific potions. Players win either by eliminating others' chips or by being the first to craft a potion, utilizing traditional poker strategy with some modifications.
+
+#### Components
+
+Game components include ingredient cards (small wooden rectangular pieces), potion recipe cards (medium sized wooden rectangular pieces), modifier cards (paper), standard deck of cards, and a set of poker chips.
+
+#### Setup
+
+- Each player draws one card from the deck. The player with the lowest card becomes the dealer.
+- The dealer shuffles the deck and places it in the designated spot.
+- Place ingredient cards, modifier cards, and recipe cards in the center of the table.
+- Each player receives 15 poker chips.
+
+#### Playing a round
+
+1. The dealer deals each player one modifier card and one playing card.
+2. Starting from the player to the left of the dealer, betting begins. Players can bet, raise, or fold.
+3. After betting, the dealer reveals four cards in the center for players to build hands with.
+4. Another round of betting occurs.
+5. One more card is revealed, followed by another betting round.
+6. The final card is revealed, and the last betting round occurs.
+7. Players show their modifiers, and a winner is determined based on hand rankings.
+8. The winner draws an ingredient card. In case of a tie, players split the pot.
+9. The dealer position rotates to the left, and cards are shuffled.
+
+#### Between rounds
+
+- The dealer reveals a new recipe card.
+- Players can exchange ingredients for potions based on the recipe. • The new dealer deals cards, and the next round starts.
+
+#### Winning a hand
+
+- Hands are ranked as in traditional Texas Hold’em.
+- Special modifiers may allow for unique hands like 5 of a Kind or Flush House. • In case of tied hands, the highest high card wins.
+- Players can only use their best 5 out of 7 cards for scoring.
+
+#### Winning the game
+
+A player wins when all other players run out of chips or if they collect the ingredients necessary to craft a potion.
+
+### Components
+
+#### Modifier cards
+
+The game contains 20 modifier cards printed on paper. This quantity was determined based on the fact that this will be a 3-4 player game. Modifier cards alter the gameplay in various ways. Examples include ”Straights and flushes may be made with 4 cards instead of 5”; ”If you lose this pot, you may take back half of the chips you bet (rounded down)”; and ”Draw a card from the deck at the end of this round. You may keep it in your hand and play it in any future round (shuffle back into deck after it is used).”
+
+#### Ingredient cards
+
+There are a total of 80 ingredient cards. Each recipe requires 4-6 ingredients. Some ingre- dients are less common than others. For example, there are 12 feather cards but only 4 rubber duck cards. They were initially designed to be circular. However, we found that a rectangular shape was ideal for optimizing material as we were able to fit all of them on a single sheet as shown in figure X.
+
+#### Recipe cards
+
+The recipe cards were illustrated in Procreate and imported into AutoCAD in preparation for laser cutting. There are 8 recipe cards in total, and each recipe requires 4-6 ingredients. In our initial prototype, each recipe had at least 8 ingredients. However, after playtesting in class, we received feedback that it took too long to craft a potion.
+
+#### Box
+
+The box was drawn in AutoCAD and laser cut from 1/8” plywood. The illustration was created using vectors instead of raster in order to save machine time on the laser. Instead of repeatedly moving left and right to engrave the image, the laser would be able to just follow the vector lines. We also designed box dividers to separate the pieces in the box. The dividers didn’t end up working out the way we envisioned as there we failed to add slots inside the box that the dividers could be secured to.
+
+#### Other peripherals
+
+For the remaining game pieces which include the playing cards and poker chips, we reasoned that it would be more feasible to use a poker set that was readily available. Since we weren’t making any modifications to that part of the game, we didn’t find it necessary to spend the time and material to fabricate custom poker chips and playing cards.
+
+## Conclusion
+
+By taking inspiration from a well-established game, poker, the group was able to keep the game relatively simple, while adding on a flavorful twist. Players each were dealt two playing cards at the beginning of each round, the same as Texas hold ‘em poker, as well as one modifier card. These modifier cards ranged from making it easier to make certain hands (cards are sorted into red and black cards instead of suits), to gaining more resources (take an extra chip from each player if you win a round), to sabotaging other players (make another player put 5 chips into the pot). These modifiers were the main game design component we worked on in order to make sure they were balanced, and clear to the players. Because of the time constraints for gameplay, the team also needed a way to speed up the game. Many games of poker can last dozens or hundreds of rounds, which would not fit in a 30-minute timeframe. As such, the team created the potion-ingredient mechanic. This way, even if players were evenly matched and nobody was winning on chips alone, the game would still have a winner in a reasonable time frame.
+
+In order to create this game, we used a laser machine to fabricate the box, ingredient cards, and potion cards. The box was cut from 1/8” plywood, with the title and art for the game engraved on top. The ingredient and potion recipe cards were also cut and engraved on the laser machine. A game board and a dealer chip for the round were considered but ultimately ruled out.
+
+While the game was generally satisfactory, there were a few things that the team agreed could have been done better. One issue we noticed was the difference in knowledge of poker; the players who were unfamiliar with poker prior to playing were left at a noticeable disadvantage to those who did. New players had to learn both poker and additional rules and mechanics. The primary criticism of the game was that it was “just poker” (not a unique game) and moreso an addition to an existing game.
