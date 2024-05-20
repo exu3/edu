@@ -43,13 +43,13 @@ export default async function (req) {
       theme === 'dark'
         ? {
             bg: '#170026',
-            dots: '#362045',
-            text: '#c975ff',
+            dots: '#20331a',
+            text: '#33d6a6',
           }
         : {
             bg: '#fcf6ff',
             dots: '#f0e6ff', // 'rgba(0,0,0,0.125)'
-            text: '#8900e1',
+            text: '#2b4423',
           }
 
     return new ImageResponse(
@@ -139,7 +139,7 @@ export default async function (req) {
               <div
                 style={{
                   textTransform: 'uppercase',
-                  color: '#7a8c97',
+                  color: '#20331a',
                   letterSpacing: 0,
                   fontSize: fontSize * 0.375,
                 }}
