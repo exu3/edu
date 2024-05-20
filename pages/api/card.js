@@ -17,13 +17,7 @@ function arrayBufferToBase64(buffer) {
 
 /* @type {(req: NextRequest) => Promise<ImageResponse>} */
 export default async function (req) {
-  const fontElenaBold = await fetch(
-    new URL('../../public/fonts/Elena-Bold.otf', import.meta.url).toString(),
-  ).then(res => res.arrayBuffer())
-  const fontKlimaRegular = await fetch(
-    new URL('../../public/fonts/Klima-Regular.otf', import.meta.url).toString(),
-  ).then(res => res.arrayBuffer())
-  const username = process.env.NEXT_PUBLIC_VERCEL_GIT_REPO_OWNER ?? 'lachlanjc'
+  const username = process.env.NEXT_PUBLIC_VERCEL_GIT_REPO_OWNER ?? 'exu3'
   const avatarResponse = await fetch(`https://github.com/${username}.png`)
   const avatarImageType = avatarResponse.headers.get('content-type')
   const avatar = arrayBufferToBase64(await avatarResponse.arrayBuffer())
@@ -73,7 +67,7 @@ export default async function (req) {
             alignItems: 'center',
             flexDirection: 'column',
             flexWrap: 'nowrap',
-            fontFamily: 'Klima, system-ui, sans-serif',
+            // fontFamily: 'system-ui, sans-serif',
             letterSpacing: '-.01em',
           }}
         >
@@ -134,7 +128,7 @@ export default async function (req) {
                 paddingBottom: 25,
                 lineHeight: 1.125,
                 whiteSpace: 'pre-wrap',
-                fontFamily: '"Elena", Georgia, serif',
+                // fontFamily: 'Georgia, serif',
                 fontSize,
                 color: colors.text,
               }}
@@ -160,20 +154,6 @@ export default async function (req) {
         width: 2400,
         height: 1256,
         // debug: true,
-        fonts: [
-          {
-            name: 'Klima',
-            data: fontKlimaRegular,
-            weight: 400,
-            style: 'normal',
-          },
-          {
-            name: 'Elena',
-            data: fontElenaBold,
-            weight: 700,
-            style: 'normal',
-          },
-        ],
       },
     )
   } catch (e) {
