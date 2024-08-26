@@ -14,7 +14,7 @@ export default function IndexPage({ sheets }) {
       <Paragraph
         sx={{ color: 'secondary', mt: 1, mb: 4, a: { color: 'inherit' } }}
       >
-        My coursework at UVM CEMS.
+        Various pieces of my undergraduate coursework.
       </Paragraph>
       <SheetList sheets={sheets} />
     </Layout>
