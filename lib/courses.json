@@ -3,5 +3,8 @@
   "gc": "Graphical Communication",
   "we": "Written Expression",
   "df": "Digital Filmmaking",
-  "fab": "Digital Fabrication"
+  "fab": "Digital Fabrication",
+  "epe": "Energy Policy and Economics",
+  "csb": "Computational Systems Biology",
+  "env": "Environmental Systems"
 }
