@@ -1,0 +1,34 @@
+# The SIR Model
+
+## Abstract
+
+The classical Susceptible-Infected-Recovered (SIR) model provides a frame- work for analyzing the spread of infectious diseases within a closed pop- ulation. This computational analysis simulates the model using ordinary differential equations to investigate how disease dynamics evolve over time under different transmission rates. Parameters analyzed include the trans- mission rate β, recovery rate γ, and basic reproduction number R0 to assess how they affect a possible outbreak. Limitations of the classical model are discussed, and future analyses taking into account demography, stochastic effects, and nonuniform population interactions to model the dynamics of more realistic epidemic behavior are suggested.
+
+## Background
+
+The Susceptible-Infected-Recovered (SIR) model is an infectious epidemic model that can be applied in the context of disease spreading in a population. The SIR model assumes a simple closed popula- tion (no births, deaths, migration) and simple disease (no mutations or other ways to spread). The model originates from the work of Kermack and McKendrick in their 1927 paper, A Contribution to the Mathematical Theory of Epidemics, where they proposed a general model for disease dynamics. The SIR model came about as a special case of their framework where transmission and recovery rates are constant. The model divides the population in three categories:
+
+- Susceptible (S) - people who have not yet been infected
+- Infected (I) - currently sick and can transmit the disease to susceptible individuals
+- Recovered (R) - individuals who have stopped being infected
+
+The model simulates how an infectious disease propagates and eventually dies out in a closed population.
+
+## Results and methods
+
+refer to paper or ipynb
+
+## Discussion
+
+In the classical SIR model, infections always die out, and once-infected people are immune indefi- nitely. These assumptions limit its realism and application to real-world epidemics. For instance, many individuals may lose immunity over time or be reinfected with a mutated strain. The SEIRS model addresses some of these limitations by extending the SIR model to account for latency using a new group for exposed E individuals who are infected but not yet infectious, loss of immunity by allowing recovered individuals to become susceptible again, births and deaths to reflect population turnover (Bjornstad and Shea 2020).
+In future analysis, the SIR model could be extended to explore spatial models where disease spreads over localized networks or in subpopulations (Ovaskainen and Hanski 2001), or incorporating stochastic effects to account for chance events such as when exactly an individual recovers.
+
+## References
+
+Bjørnstad, O.N., Shea, K., Krzywinski, M. et al. 2020. The SEIRS model for infectious disease dynamics. Nat Methods 17, 557–558. https://doi.org/10.1038/s41592-020-0856-2
+
+Jones, James H. 2021. Notes on R0. Department of Anthropological Sciences, Stanford University. https://populationsciences.berkeley.edu/wp-content/uploads/2021/06/Jones-Notes-on-R0.pdf
+
+Kermack William Ogilvy and McKendrick A. G. 1927 A contribution to the mathematical theory of epidemics Proc. R. Soc. Lond. A115700–721 http://doi.org/10.1098/rspa.1927.0118
+
+Ovaskainen, O., and I. Hanski. 2001. Spatially structured metapopulation models: Global and local assessment of metapopulation capacity. Theoretical population biology 60:281–302.
