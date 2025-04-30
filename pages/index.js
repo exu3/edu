@@ -14,7 +14,7 @@ export default function IndexPage({ sheets }) {
       <Paragraph
         sx={{ color: 'secondary', mt: 1, mb: 4, a: { color: 'inherit' } }}
       >
-        Stuff and Things from my undergraduate coursework.
+        Stuff and Things from my undergraduate coursework in ?? engineering.
       </Paragraph>
       <SheetList sheets={sheets} />
     </Layout>
