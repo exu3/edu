@@ -9,6 +9,10 @@ Create a new MDX file in `sheets/` named using the following format:
 
 Add a new course in `/lib/courses.json`
 
-Remix of [@lachlanjc/edu](https://github.com/lachlanjc/edu) which is a remix of [@lachlanjc/notebook](https://github.com/lachlanjc/notebook).
+## appendix
 
-MIT License
+also see [`exu3/BME3340`](https://github.com/exu3/BME3340) and [`exu/EE3315`](https://github.com/exu3/EE3315)
+
+---
+
+###### This is a remix of [@lachlanjc/edu](https://github.com/lachlanjc/edu) which is a remix of [@lachlanjc/notebook](https://github.com/lachlanjc/notebook).
