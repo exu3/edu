@@ -1,6 +1,5 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui'
-import React from 'react'
 import theme, { palette } from '../lib/theme'
 import CodePenEmbed from 'react-codepen-embed'
 
@@ -36,22 +35,6 @@ export const P5 = props => (
     {...props}
   />
 )
-
-export const Glitch = ({ title, ...props }) => (
-  <div
-    className="glitch-embed-wrap"
-    sx={{ height: 420, width: '100%', my: [3, 4], ...props.sx }}
-  >
-    <iframe
-      title={title}
-      sx={{ height: '100%', width: '100%', border: 0 }}
-      allow="geolocation; microphone; camera; midi; vr; encrypted-media"
-      {...props}
-    />
-  </div>
-)
-
-export const CodePen = props => <CodePenEmbed user="lachlanjc" {...props} />
 
 export const CommitList = props => (
   <div

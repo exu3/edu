@@ -1,5 +1,3 @@
-import * as React from 'react'
-
 import theme from '../lib/theme'
 import components from '../lib/components'
 import { ThemeProvider } from 'theme-ui'

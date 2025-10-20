@@ -1,0 +1,18 @@
+# South Street Storage
+
+South Street Storage is a 2 MW, 8 MWh, utility scale battery energy storage system in Middlebury that serves customers of Green Mountain Power. This enables GMP to deliver peak demand energy at lower cost by sending stored renewable energy when it's needed most. The lithium-ion batteries were manufactured by KORE Power based in Waterbury.
+
+We model the financial profit of South Street Storage on a day in October using the ISO local marginal price (LMP) data by charging when electricity is cheap and discharging when expensive. We make the following assumptions:
+
+- October 9, 2025 LMP data
+- battery starts with 0MWh charge
+- capacity 8MWh, 2MWh per hour power
+- efficiency = .9
+- charge if price below $30/MWh, discharge if above $38/MWh (determined thresholds by guess & check)
+
+Using the day ahead LMP data, South Street Storage can make a profit of $334.77. Assuming the same conditions using real time LMP data, they make a profit of $162.36. The predicted day-ahead data overestimates profit likely because it assumes that the battery can accurately predict and respond to price spik es. In real time, the price spikes might be dictated by wind/solar variability which is hard to accurately forecast.
+
+References
+
+- [Jupyter Notebook with calculations](https://github.com/exu3/EE3315/blob/main/playground/south_st_battery.ipynb)
+- Encore Renewable Energy, [Encore Renewable Energy powers up first energy storage system at Middlebury College](https://encorerenewableenergy.com/encore-renewable-energy-powers-up-first-energy-storage-system-at-middlebury-college/)

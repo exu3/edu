@@ -1,4 +1,3 @@
-import React from 'react'
 import { Avatar as Base } from 'theme-ui'
 
 const Avatar = ({ size = 48, ...props }) => (

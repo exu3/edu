@@ -158,9 +158,6 @@ const Layout = ({ xl, sx, ...props }) => {
             <Icon glyph="rss" size={36} />
           </a> */}
         </Flex>
-        {/* <Text sx={{ color: 'secondary', fontSize: '0' }}>
-          This website is a remix of <span>@lachlanjc/edu</span>.
-        </Text> */}
       </Flex>
     </Box>
   )
