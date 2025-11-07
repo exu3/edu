@@ -5,9 +5,7 @@ import { withContentlayer } from 'next-contentlayer'
  */
 const config = withContentlayer({
   swcMinify: true,
-  compiler: {
-    emotion: true,
-  },
+  compiler: { emotion: true },
   pageExtensions: ['js', 'ts', 'tsx', 'mdx'],
   images: {
     domains: ['cdn.glitch.com', 'www.icloud.com'],
@@ -23,6 +21,15 @@ const config = withContentlayer({
         permanent: true,
       },
     ]
+  },
+  webpack(config) {
+    config.ignoreWarnings = [
+      {
+        message:
+          /Parsing of .*getConfig\/index\.js for build dependencies failed/,
+      },
+    ]
+    return config
   },
 })
 

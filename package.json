@@ -3,7 +3,8 @@
   "version": "2.0.0",
   "main": "index.js",
   "scripts": {
-    "dev": "next dev",
+    "ndev": "next dev",
+    "dev": "concurrently \"contentlayer dev\" \"next dev\"",
     "start": "next start",
     "build": "next build",
     "postbuild": "node --experimental-json-modules ./lib/rss.mjs",
@@ -20,7 +21,9 @@
     "@theme-ui/prism": "^0.14.7",
     "@vercel/og": "^0.0.21",
     "contentlayer": "^0.2.9",
+    "glitch-cdn": "^1.0.11",
     "lodash-es": "^4.17.21",
+    "markdown-wasm": "^1.2.0",
     "next": "^13.0.5",
     "next-contentlayer": "^0.2.9",
     "react": "^18.2.0",
@@ -39,5 +42,8 @@
     "supercons": "^0.0.1",
     "theme-ui": "^0.14.7",
     "title": "^3.5.3"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1"
   }
 }
