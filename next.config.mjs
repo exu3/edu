@@ -20,6 +20,11 @@ const config = withContentlayer({
         destination: 'https://www.youtube.com/watch?v=pwBlMwo_roQ',
         permanent: true,
       },
+      {
+        source: '/norwich1',
+        destination: '/norwich/idr-deck.pdf',
+        permanent: false,
+      },
     ]
   },
   webpack(config) {
