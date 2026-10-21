@@ -1,0 +1,29 @@
+# Analysis of Greenhouse Heating Methods in VT Winters
+
+## Context
+
+Winters in Vermont are long; consequently, the outdoor growing season is short. Greenhouses are used to extend the growing season for cold-hardy crops like leafy greens but still require supplemental heat in winter. The heating methods I analyzed are electric, liquid propane, and biomass. The heating demand of a greenhouse depends on the geometry and material of the house and cover, and the outdoor temperature.
+
+## Problem Statement
+
+For the purpose of comparing heating methods, I'm using this 30x100' A-frame greenhouse that is 15ft tall with a double polycarbonate sheet cover. We will say that the heating system needs to keep the greenhouse at 60F. Accurate modeling of heat demand is complicated because factors like solar gain could increase the temperature inside such that the heater would not need to turn on. For simplicity, I assumed that the heater will dispatch heat when the outside temperature is below 35F and ignore solar gain. This would produce an overestimate of heat-on hours.
+
+## Case Study
+
+Using the u-value of the double polycarbonate sheet, the surface area of the cover, and temperature data from Burlington in 2022 and the simplified heat-on condition, I calculated the heating demand for the year to be 374 million BTU. Next, I used this estimated heating demand to model gas and electric heating costs.
+
+(Side note: I used 2022 electricity prices to model these scenarios and converted all costs to 2022 dollars using the CPI for inflation.)
+
+The first is the Reznor UEZ gas-fired heater which uses liquid propane. One unit would be ample to meet peak heating demand. The cost to install would be $7803. The cost of liquid propane, average in year 2022, was $3.60/gal, and the fuel cost was calculated to be $16k. The heater would run for 2768 hours in a year.
+
+For the electric forced air heater, four units would be required to meet peak heating demand. The cost of four units is
+
+And for biomass, I used figures from \_\_\_, converting 2010 dollars to 2022 dollars.
+
+## Conclusions
+
+Based on this model, the (annual and upfront) cost of heating with electric is lower. However, heating with electric also requires more infrastructure. Powering heaters with grid electricity can be unreliable because a power outage can result in crop losses, and
+
+I would suggest anyone reading to take this with a grain of salt. Given that the measured BTU demand of ICF's biomass heater in 2010 was much lower than my calculated figures, it's likely that my model is not an accurate depiction of an average VT greenhouse.
+
+Perhaps electric forced air heaters could be feasible. Air circulation fans require electricity, so there are probably already electrical hookups to the tunnel. The actual cost might be more than the model because you'd need to get some kind of thermostat probably. I wonder if anyone has actually done this.
