@@ -1,8 +1,8 @@
-import { defineDocumentType, makeSource } from 'contentlayer/source-files'
+import { defineDocumentType, makeSource } from 'contentlayer2/source-files'
 import { hasDate, getDate, getName } from './lib/util'
 import COURSES from './lib/courses.json'
 import remarkGfm from 'remark-gfm'
-import rehypeAccessibleEmojis from 'rehype-accessible-emojis'
+import { rehypeAccessibleEmojis } from 'rehype-accessible-emojis'
 import rehypeCodeTitles from 'rehype-code-title'
 
 export const Sheet = defineDocumentType(() => ({

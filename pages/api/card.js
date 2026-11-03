@@ -2,7 +2,7 @@ import { ImageResponse } from '@vercel/og'
 // import { NextRequest } from 'next/server'
 
 export const config = {
-  runtime: 'experimental-edge',
+  runtime: 'edge',
 }
 
 /** @type {(buffer: ArrayBuffer) => string} */
@@ -53,103 +53,101 @@ export default async function (req) {
           }
 
     return new ImageResponse(
-      (
+      <div
+        style={{
+          backgroundColor: colors.bg,
+          backgroundImage: `radial-gradient(circle at 25px 25px, ${colors.dots} 3%, transparent 0%),   
+            radial-gradient(circle at 75px 75px, ${colors.dots} 3%, transparent 0%)`,
+          backgroundSize: '100px 100px',
+          height: '100%',
+          width: '100%',
+          display: 'flex',
+          textAlign: 'center',
+          alignItems: 'center',
+          flexDirection: 'column',
+          flexWrap: 'nowrap',
+          // fontFamily: 'system-ui, sans-serif',
+          letterSpacing: '-.01em',
+        }}
+      >
         <div
           style={{
-            backgroundColor: colors.bg,
-            backgroundImage: `radial-gradient(circle at 25px 25px, ${colors.dots} 3%, transparent 0%),   
-            radial-gradient(circle at 75px 75px, ${colors.dots} 3%, transparent 0%)`,
-            backgroundSize: '100px 100px',
-            height: '100%',
-            width: '100%',
             display: 'flex',
-            textAlign: 'center',
             alignItems: 'center',
+            alignContent: 'center',
+            justifyContent: 'center',
+            justifyItems: 'center',
+            fontSize: '105px',
+            padding: '50px',
+            marginTop: 25,
+          }}
+        >
+          <img
+            src={`data:${avatarImageType};base64,${avatar}`}
+            width={125}
+            height={125}
+            style={{
+              borderRadius: 75,
+              margin: 0,
+              marginRight: 35,
+            }}
+          />
+          <span
+            style={{
+              color: '#8492a6',
+            }}
+          >
+            {username}/
+          </span>
+          <span
+            style={{
+              color: colors.text,
+              // fontWeight: 'bold',
+              marginLeft: '1ch',
+            }}
+          >
+            edu
+          </span>
+        </div>
+        <div
+          style={{
+            marginTop: 'auto',
+            marginBottom: 'auto',
+            display: 'flex',
             flexDirection: 'column',
-            flexWrap: 'nowrap',
-            // fontFamily: 'system-ui, sans-serif',
-            letterSpacing: '-.01em',
+            alignItems: 'center',
+            alignContent: 'center',
+            justifyContent: 'center',
+            justifyItems: 'center',
           }}
         >
           <div
             style={{
-              display: 'flex',
-              alignItems: 'center',
-              alignContent: 'center',
-              justifyContent: 'center',
-              justifyItems: 'center',
-              fontSize: '105px',
-              padding: '50px',
-              marginTop: 25,
+              margin: '-0.25em 0.375em 0.25em',
+              paddingBottom: 25,
+              lineHeight: 1.125,
+              whiteSpace: 'pre-wrap',
+              // fontFamily: 'Georgia, serif',
+              fontSize,
+              color: colors.text,
             }}
           >
-            <img
-              src={`data:${avatarImageType};base64,${avatar}`}
-              width={125}
-              height={125}
-              style={{
-                borderRadius: 75,
-                margin: 0,
-                marginRight: 35,
-              }}
-            />
-            <span
-              style={{
-                color: '#8492a6',
-              }}
-            >
-              {username}/
-            </span>
-            <span
-              style={{
-                color: colors.text,
-                // fontWeight: 'bold',
-                marginLeft: '1ch',
-              }}
-            >
-              edu
-            </span>
+            {title}
           </div>
-          <div
-            style={{
-              marginTop: 'auto',
-              marginBottom: 'auto',
-              display: 'flex',
-              flexDirection: 'column',
-              alignItems: 'center',
-              alignContent: 'center',
-              justifyContent: 'center',
-              justifyItems: 'center',
-            }}
-          >
+          {caption && (
             <div
               style={{
-                margin: '-0.25em 0.375em 0.25em',
-                paddingBottom: 25,
-                lineHeight: 1.125,
-                whiteSpace: 'pre-wrap',
-                // fontFamily: 'Georgia, serif',
-                fontSize,
-                color: colors.text,
+                textTransform: 'uppercase',
+                color: '#20331a',
+                letterSpacing: 0,
+                fontSize: fontSize * 0.375,
               }}
             >
-              {title}
+              {caption}
             </div>
-            {caption && (
-              <div
-                style={{
-                  textTransform: 'uppercase',
-                  color: '#20331a',
-                  letterSpacing: 0,
-                  fontSize: fontSize * 0.375,
-                }}
-              >
-                {caption}
-              </div>
-            )}
-          </div>
+          )}
         </div>
-      ),
+      </div>,
       {
         width: 2400,
         height: 1256,

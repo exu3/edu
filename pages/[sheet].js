@@ -1,5 +1,5 @@
 import { BaseStyles } from 'theme-ui'
-import { useMDXComponent } from 'next-contentlayer/hooks'
+import { useMDXComponent } from 'next-contentlayer2/hooks'
 import components from '../lib/components'
 import Layout from '../components/layout'
 import { allSheets } from 'contentlayer/generated'
