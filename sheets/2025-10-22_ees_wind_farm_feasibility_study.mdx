@@ -1,0 +1,44 @@
+# L04: Wind Farm Feasibility Study
+
+## Executive Summary
+
+In this study, we evaluate the economic feasibility of a 50 MW wind farm over a 20-year outlook using dispatch logic based on hourly wind speed data and VT 2022 electricity prices.
+
+Based on the interpolated GE 1.5 MW turbine power curve (Figure 1) and site wind data, the plant would require 65 GE 1.5 MW turbines to achieve a 50 MW annual average capacity, resulting in a total installed capacity of 97.5 MW. The calculated capacity factor is 0.51 with turbines producing power for 7863 hours per year.
+
+![FIGURE PLACEHOLDER (L04 Figure 1). Matplotlib chart titled "GE 1.5 MW Wind turbine power curve" with gridlines. X-axis: Wind Speed (m/s), 0 to 35. Y-axis: Power Output (kW), 0 to about 1500. A solid blue line (power curve) is 0 kW from 0 to about 3.5 m/s (cut-in), rises in an S-shape through about 75 kW at 4.5, 200 at 5.5, 250 at 6, 500 at 7.5, 950 at 9, 1250 at 10.5 and 1450 at 12 m/s, reaches the rated 1500 kW at about 14 m/s, stays flat at 1500 kW until 25 m/s, then drops vertically to 0 (cut-out) and stays at 0 out to 35 m/s. Red dots mark the manufacturer data points along the rising section and at 14 and 25 m/s. Legend in the upper right: power curve, data points.](L04-fig1-turbine-power-curve.png)
+
+_Figure 1: Interpolated GE 1.5 MW turbine power curve._
+
+In year 1, the plant would generate 6706 MW, producing $37.2 million in revenue from electricity sales. The plant would pay $4.1 million in O&M costs, with an annual capital payment of $AAA assuming a 20-year loan with 5% interest with principal $1.5 million/MW. The resulting year one profit is $11.8 million.
+
+Over the 20-year planning horizon assuming 3% inflation for electricity prices and 2.5% inflation for O&M costs (Table 2), we predict it will continue to be profitable. Such conditions remain sensitive to electricity market prices, fuel prices, and inflation rate.
+
+| Year | O&M Cost ($) | Annual Payment ($) | Total Cost ($) | Total Revenue ($) | Net Profit ($) |
+| ---: | -----------: | -----------------: | -------------: | ----------------: | -------------: |
+|    1 | 4,192,500.00 |      11,791,192.10 |  15,983,692.10 |     37,241,178.17 |  21,257,486.07 |
+|    2 | 4,297,312.50 |      11,791,192.10 |  16,088,504.60 |     38,358,413.52 |  22,269,908.91 |
+|    3 | 4,404,745.31 |      11,791,192.10 |  16,195,937.42 |     39,509,165.92 |  23,313,228.51 |
+|    4 | 4,514,863.95 |      11,791,192.10 |  16,306,056.05 |     40,694,440.90 |  24,388,384.85 |
+|    5 | 4,627,735.54 |      11,791,192.10 |  16,418,927.65 |     41,915,274.13 |  25,496,346.48 |
+|    6 | 4,743,428.93 |      11,791,192.10 |  16,534,621.04 |     43,172,732.35 |  26,638,111.32 |
+|    7 | 4,862,014.66 |      11,791,192.10 |  16,653,206.76 |     44,467,914.32 |  27,814,707.56 |
+|    8 | 4,983,565.02 |      11,791,192.10 |  16,774,757.13 |     45,801,951.75 |  29,027,194.63 |
+|    9 | 5,108,154.15 |      11,791,192.10 |  16,899,346.25 |     47,176,010.31 |  30,276,664.05 |
+|   10 | 5,235,858.00 |      11,791,192.10 |  17,027,050.11 |     48,591,290.61 |  31,564,240.51 |
+|   11 | 5,366,754.45 |      11,791,192.10 |  17,157,946.56 |     50,049,029.33 |  32,891,082.78 |
+|   12 | 5,500,923.31 |      11,791,192.10 |  17,292,115.42 |     51,550,500.21 |  34,258,384.80 |
+|   13 | 5,638,446.40 |      11,791,192.10 |  17,429,638.50 |     53,097,015.22 |  35,667,376.72 |
+|   14 | 5,779,407.56 |      11,791,192.10 |  17,570,599.66 |     54,689,925.68 |  37,119,326.02 |
+|   15 | 5,923,892.74 |      11,791,192.10 |  17,715,084.85 |     56,330,623.45 |  38,615,538.60 |
+|   16 | 6,071,990.06 |      11,791,192.10 |  17,863,182.17 |     58,020,542.15 |  40,157,359.98 |
+|   17 | 6,223,789.81 |      11,791,192.10 |  18,014,981.92 |     59,761,158.41 |  41,746,176.49 |
+|   18 | 6,379,384.56 |      11,791,192.10 |  18,170,576.66 |     61,553,993.17 |  43,383,416.50 |
+|   19 | 6,538,869.17 |      11,791,192.10 |  18,330,061.28 |     63,400,612.96 |  45,070,551.68 |
+|   20 | 6,702,340.90 |      11,791,192.10 |  18,493,533.01 |     65,302,631.35 |  46,809,098.34 |
+
+_Table 2: Models cash flow over a 20-year outlook using a 2% inflation rate._
+
+## Discussion
+
+The modeled wind farm appears economically feasible under current price and cost assumptions. Compared to the previously modeled CHP NG power plant, the wind farm's economic performance is affected by the lack of fuel costs and large up-front capital investment. Policy incentives and production tax credits could improve profitability.

@@ -1,0 +1,66 @@
+# L03: Natural Gas Power Plant Feasibility Study
+
+## Executive Summary
+
+In this study, we evaluate the economic feasibility of a 50 MW natural gas combined heat and power plant over a 20-year outlook using dispatch logic based on 2022 Vermont electricity prices and measured site data including wind speed and solar radiation.
+
+We found that such a plant would require one GE 6F.01 gas turbine to achieve a 50 MW average yearly plant capacity. The annual capacity factor would be 0.962, and the plant would dispatch energy 8428 hours of the year. In year 1, the plant would make $36,387,255 in revenue from selling electricity and $23,939,995 in revenue from heat. With costs factored in, the total profit would be close to $24 million for the year. To construct the plant, we would suggest a 20-year loan to cover install costs (principal) with 5% interest compounded annually for an annual capital payment of $4,170,177. The cost for the plant to produce 1 MWh of electricity without selling heat is $80.78. With selling heat, the net cost is $37.94 to produce 1 MWh of electricity. With the simulated electricity prices, fuel costs (fixed $2.70/MMBtu), the co-generating natural gas plant would be economically viable especially with the reduced net cost when supplying waste heat to the hospital.
+
+## Analysis, Methods, and Results
+
+To reach the annual generation target of 438 GWh/year, we size the power plant at 51.97 MW which would be met with one GE 6F.01 turbine. We model the power plant using hourly dispatch logic in which power is dispatched at full capacity if revenue exceeds costs. Steam sales to the hospital are dependent on temperature modeled using Equation 1, and a maximum of 40% of thermal input can be delivered as steam.
+
+$$
+H_h = \max\big((70 - T_h) \cdot 10^5,\ 0\big)\ \text{MMBtu/hr} \tag{1}
+$$
+
+To model revenue, we use the following rates and assumptions:
+
+- Heat revenue: $15/MMBtu
+- Fuel cost: Thermal input / efficiency × $2.70/MMBtu
+- Operating and Maintenance cost: $6/MWh generated
+- Capital cost $1,000/kW installed; annual loan payment for 20 years, 5% interest
+- Inflation: 2% yearly for 20-year projection
+
+| Metric                          |        Value |
+| :------------------------------ | -----------: |
+| Installed capacity              |     51.97 MW |
+| Hours dispatched                | 8,428 h/year |
+| Capacity factor                 |        0.962 |
+| Electricity revenue             |  $36,387,255 |
+| Heat revenue                    |     $297,633 |
+| Total profit (Year 1)           |  $23,939,995 |
+| Annual capital payment          |   $4,170,177 |
+| Cost of electricity (no heat)   |   $80.78/MWh |
+| Cost of electricity (with heat) |   $37.94/MWh |
+
+_Table 1: Figures for power plant operation over 1 year._
+
+This model supports the feasibility of such a plant. Supplying heat to the hospital reduces net electricity cost by more than 50%, and the plant dispatches energy for 96% of the year. Our model assumes a static fuel price throughout the year, but market fluctuations could affect the profitability of the plant.
+
+Using a 20-year projection assuming 2% inflation (Table 2), we predict it will continue to be profitable. Such conditions remain sensitive to electricity market prices, fuel prices, and inflation rate.
+
+| Year | Electricity Revenue ($) | Steam Revenue ($) | Total Revenue ($) | Fuel Cost ($) | O&M Cost ($) | Capital Payment ($) | Total Cost ($) | Net Profit ($) |
+| ---: | ----------------------: | ----------------: | ----------------: | ------------: | -----------: | ------------------: | -------------: | -------------: |
+|    1 |              36,387,255 |           297,633 |        36,684,889 |    10,216,493 |    2,528,400 |           4,170,177 |     16,915,070 |     19,769,818 |
+|    2 |              43,664,707 |           357,160 |        44,021,866 |    12,259,792 |    3,034,080 |           4,170,177 |     19,464,049 |     24,557,817 |
+|    3 |              52,397,648 |           428,592 |        52,826,240 |    14,711,750 |    3,640,896 |           4,170,177 |     22,522,823 |     30,303,416 |
+|    4 |              62,877,178 |           514,310 |        63,391,488 |    17,654,100 |    4,369,075 |           4,170,177 |     26,193,353 |     37,198,135 |
+|    5 |              75,452,613 |           617,172 |        76,069,785 |    21,184,920 |    5,242,890 |           4,170,177 |     30,597,988 |     45,471,797 |
+|    6 |              90,543,136 |           740,607 |        91,283,742 |    25,421,904 |    6,291,468 |           4,170,177 |     35,883,550 |     55,400,192 |
+|    7 |             108,651,763 |           888,728 |       109,540,491 |    30,506,285 |    7,549,762 |           4,170,177 |     42,226,225 |     67,314,266 |
+|    8 |             130,382,115 |         1,066,473 |       131,448,589 |    36,607,542 |    9,059,714 |           4,170,177 |     49,837,434 |     81,611,155 |
+|    9 |             156,458,538 |         1,279,768 |       157,738,306 |    43,929,051 |   10,871,657 |           4,170,177 |     58,970,885 |     98,767,421 |
+|   10 |             187,750,246 |         1,535,722 |       189,285,968 |    52,714,861 |   13,045,989 |           4,170,177 |     69,931,027 |    119,354,941 |
+|   11 |             225,300,295 |         1,842,866 |       227,143,161 |    63,257,833 |   15,655,186 |           4,170,177 |     83,083,197 |    144,059,964 |
+|   12 |             270,360,354 |         2,211,439 |       272,571,794 |    75,909,400 |   18,786,224 |           4,170,177 |     98,865,801 |    173,705,993 |
+|   13 |             324,432,425 |         2,653,727 |       327,086,152 |    91,091,280 |   22,543,468 |           4,170,177 |    117,804,926 |    209,281,227 |
+|   14 |             389,318,910 |         3,184,473 |       392,503,383 |   109,309,536 |   27,052,162 |           4,170,177 |    140,531,875 |    251,971,507 |
+|   15 |             467,182,692 |         3,821,367 |       471,004,059 |   131,171,443 |   32,462,594 |           4,170,177 |    167,804,215 |    303,199,844 |
+|   16 |             560,619,231 |         4,585,641 |       565,204,871 |   157,405,732 |   38,955,113 |           4,170,177 |    200,531,023 |    364,673,849 |
+|   17 |             672,743,077 |         5,502,769 |       678,245,845 |   188,886,878 |   46,746,136 |           4,170,177 |    239,803,192 |    438,442,654 |
+|   18 |             807,291,692 |         6,603,323 |       813,895,015 |   226,664,254 |   56,095,363 |           4,170,177 |    286,929,794 |    526,965,220 |
+|   19 |             968,750,030 |         7,923,987 |       976,674,017 |   271,997,105 |   67,314,436 |           4,170,177 |    343,481,718 |    633,192,300 |
+|   20 |           1,162,500,036 |         9,508,785 |     1,172,008,821 |   326,396,526 |   80,777,323 |           4,170,177 |    411,344,026 |    760,664,795 |
+
+_Table 2: Models cash flow over a 20-year outlook using a 2% inflation rate._

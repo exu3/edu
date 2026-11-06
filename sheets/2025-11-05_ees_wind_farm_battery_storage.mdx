@@ -1,0 +1,39 @@
+# L06: Batteries
+
+Wind farms are intermittent, and pairing them with battery storage can improve productivity by storing energy when prices are low and selling when high. We evaluate the feasibility of adding batteries to the previously studied 99 MW wind farm using a dispatch rule based on 30-day moving average electricity price. The battery is charged when the electricity price is less than the 30-day average, and discharge when greater than the moving average. We assume state of charge bounds between 25–80% and is 96% efficient when charging and discharging. In this lab, we were presented with two battery options listed below (Table 1), and their respective costs and benefits.
+
+- Battery 1: 400 kWh, 100 kW
+- Battery 2: 400 kWh, 200 kW
+
+| Battery | Annual Revenue ($) | Annual Cost ($) | Annual Profit ($) | Payback (yrs) |
+| ------: | -----------------: | --------------: | ----------------: | ------------: |
+|       1 |           7,673.74 |        5,802.24 |          1,871.50 |          71.4 |
+|       2 |           8,621.46 |        7,112.14 |          1,509.33 |          88.5 |
+
+_Table 1: Economic analysis for each battery option._
+
+Battery option 1 has slightly lower revenue but lower costs, resulting in a higher profit and shorter payback. Option 2 has a higher power rating, but the costs exceed the revenue such that the profit is lower. Therefore, we recommend battery option 1 under given conditions.
+
+## Changing variables
+
+By changing the ranges for the state of charge, we can simulate a battery with deeper discharge cycles or shallower/quicker cycles. We found that the deeper discharge cycles increased profitability of the system (Table 2).
+
+| SOC Range                      | Annual Revenue ($) | Annual Cost ($) | Annual Profit ($) | Payback Period (years) |
+| :----------------------------- | -----------------: | --------------: | ----------------: | ---------------------: |
+| 0.20 – 0.85 (deeper discharge) |           8,746.13 |        6,461.05 |          2,285.08 |                  58.47 |
+| 0.25 – 0.80 (default)          |           7,673.74 |        5,802.24 |          1,871.50 |                  71.39 |
+| 0.30 – 0.75 (shallower cycles) |           6,592.67 |        5,097.45 |          1,495.22 |                  89.35 |
+
+_Table 2: Outcomes from simulating changing SOC parameters._
+
+We also analyzed the feasibility of increasing the number of batteries (Table 3). We found that revenue, costs, and profits all increased with more batteries, but payback period only decreased marginally. Therefore, the operator would not get the best returns by adding more batteries to the system.
+
+| # Batteries | Annual Revenue ($) | Annual Cost ($) | Annual Profit ($) | Payback Period (years) |
+| ----------: | -----------------: | --------------: | ----------------: | ---------------------: |
+|           2 |          15,348.41 |       11,594.89 |          3,753.52 |                  71.19 |
+|           3 |          23,022.61 |       17,377.54 |          5,645.07 |                  71.00 |
+|           4 |          30,710.78 |       23,160.86 |          7,549.92 |                  70.78 |
+|           8 |          61,411.83 |       46,144.03 |         15,267.80 |                  70.00 |
+|          15 |         115,497.75 |       85,742.56 |         29,755.19 |                  67.35 |
+
+_Table 3: Outcomes from simulating number of batteries._

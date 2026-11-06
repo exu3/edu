@@ -1,0 +1,44 @@
+# L05: Solar PV Feasibility Study
+
+## Executive Summary
+
+In this study, we evaluate the economic feasibility of a 50 MW solar PV array over a 20-year outlook using dispatch logic based on Champlain Valley hourly solar radiation data in 2022 and VT 2022 electricity prices. We model the solar power plant using the Panasonic HIT PV module N330E tilted at the angle 44.5 degrees and facing south.
+
+To achieve a 50 MW average output, the solar PV plant will be sized at 270 MW DC (262 MW AC), requiring 819,703 solar panels spanning 338.26 acres. The capacity factor is 0.19055. For solar PV, energy dispatch occurs when irradiance (as predicted by 2022 data) is greater than 0.
+
+In one year, the plant's revenue from electricity sales sums to approximately $41.8 million per year. Operation and maintenance would cost approximately $3.9 million per year. For a 20-year loan, at i = 0.05, with principal to cover the construction cost, the annual payment would be $22.9 million per year. The net cash flow is positive $14.9 million; therefore, the solar PV plant is feasible.
+
+Over the 20-year planning horizon assuming 3% inflation for electricity prices and 2.5% inflation for O&M costs (Table 2), we predict it will continue to be profitable. Such conditions remain sensitive to electricity market prices, fuel prices, and inflation rate.
+
+| Year | O&M Cost ($) | Annuity Payment ($) | Total Cost ($) | Total Rev ($) |       Net ($) |
+| ---: | -----------: | ------------------: | -------------: | ------------: | ------------: |
+|    1 | 3,952,034.07 |       22,949,520.68 |  26,901,554.76 | 41,841,309.16 | 14,939,754.40 |
+|    2 | 4,050,834.93 |       22,949,520.68 |  27,000,355.61 | 43,096,548.43 | 16,096,192.82 |
+|    3 | 4,152,105.80 |       22,949,520.68 |  27,101,626.48 | 44,389,444.88 | 17,287,818.40 |
+|    4 | 4,255,908.44 |       22,949,520.68 |  27,205,429.13 | 45,721,128.23 | 18,515,699.10 |
+|    5 | 4,362,306.15 |       22,949,520.68 |  27,311,826.84 | 47,092,762.08 | 19,780,935.24 |
+|    6 | 4,471,363.81 |       22,949,520.68 |  27,420,884.49 | 48,505,544.94 | 21,084,660.45 |
+|    7 | 4,583,147.90 |       22,949,520.68 |  27,532,668.59 | 49,960,711.29 | 22,428,042.70 |
+|    8 | 4,697,726.60 |       22,949,520.68 |  27,647,247.29 | 51,459,532.63 | 23,812,285.34 |
+|    9 | 4,815,169.77 |       22,949,520.68 |  27,764,690.45 | 53,003,318.60 | 25,238,628.15 |
+|   10 | 4,935,549.01 |       22,949,520.68 |  27,885,069.70 | 54,593,418.16 | 26,708,348.47 |
+|   11 | 5,058,937.74 |       22,949,520.68 |  28,008,458.42 | 56,231,220.71 | 28,222,762.29 |
+|   12 | 5,185,411.18 |       22,949,520.68 |  28,134,931.86 | 57,918,157.33 | 29,783,225.46 |
+|   13 | 5,315,046.46 |       22,949,520.68 |  28,264,567.14 | 59,655,702.05 | 31,391,134.90 |
+|   14 | 5,447,922.62 |       22,949,520.68 |  28,397,443.30 | 61,445,373.11 | 33,047,929.80 |
+|   15 | 5,584,120.69 |       22,949,520.68 |  28,533,641.37 | 63,288,734.30 | 34,755,092.93 |
+|   16 | 5,723,723.70 |       22,949,520.68 |  28,673,244.39 | 65,187,396.33 | 36,514,151.94 |
+|   17 | 5,866,816.80 |       22,949,520.68 |  28,816,337.48 | 67,143,018.22 | 38,326,680.74 |
+|   18 | 6,013,487.22 |       22,949,520.68 |  28,963,007.90 | 69,157,308.77 | 40,194,300.87 |
+|   19 | 6,163,824.40 |       22,949,520.68 |  29,113,345.08 | 71,232,028.03 | 42,118,682.95 |
+|   20 | 6,317,920.01 |       22,949,520.68 |  29,267,440.69 | 73,368,988.87 | 44,101,548.18 |
+
+_Table 1: Models cash flow over a 20-year outlook considering uniform inflation rate._
+
+## Discussion
+
+Compared to the NG power plant, the solar PV plant has lower operating cost and no fuel costs. The intermittency and variance of solar irradiance (Figure 2) may affect energy production and revenue. This uncertainty also applies to the wind farm. Unlike the wind and NG plants, the solar PV plant requires a significant amount of land area that may incur a large upfront cost for purchase or lease and may be accompanied with additional permitting obstacles and stakeholder opposition which could impact the project's feasibility.
+
+![FIGURE PLACEHOLDER (L05 Figure 2). Wide matplotlib single blue line chart titled "Solar Energy Production (48-hr period)" with light gridlines. X-axis: hour, 0 to 47. Y-axis: power (MW), 0 to about 45. Output is 0 overnight. Day 1: rises from 0 at hour 12 to about 13 MW at hour 13 and 22 MW at hour 14, peaks at about 36 MW at hour 15, drops to about 15 MW at hour 16 and 9 MW at hour 17, bumps to about 12.5 MW at hour 18, then tapers to 0 by hour 21. Zero from hour 21 to 36. Day 2: rises from hour 36 through about 2, 6.5 and 13 MW to a sharp peak of about 43.5 MW at hour 40, dips to about 26 MW at hour 41 (likely cloud cover), climbs to about 42 MW at hour 42 and the overall maximum of about 46 MW at hour 43, then falls to about 5.5 MW at hour 44 and 0 by hour 45.](L05-fig2-solar-48hr-production.png)
+
+_Figure 2: Power generation over the first 48-hour period in the 2022 irradiance data for Champlain Valley region._

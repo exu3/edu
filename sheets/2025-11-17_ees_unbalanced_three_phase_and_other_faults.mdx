@@ -1,0 +1,41 @@
+# L07: Unbalanced 3-Phase and Other Faults
+
+## Overview
+
+In this lab, we calculate and graph current waveforms of 3-phase loads/sources and calculate complex power for difference scenarios. We compare a benchmark scenario (balanced source/loads) to an unbalanced scenario, line-to-line fault, and connection fault.
+
+## Balanced case
+
+The balanced case consists of 3 voltage sources that generate the same voltage magnitude, same frequency, and 120° out of phase from each other. Figure 1 shows the Y-connected line and phase currents, and Figure 2 shows the delta-connected line and phase currents.
+
+![FIGURE PLACEHOLDER (L07 Figure 1). Two stacked matplotlib subplots sharing a time axis of one 60 Hz cycle (0 to about 0.0167 s), with gridlines. Top: "balanced Y (line currents)", y-axis current (A) from -7.5 to 7.5, three sinusoids Ia (blue), Ib (orange), Ic (green), all with equal amplitude of about 8 A and spaced 120° apart; Ia starts near 3.8 A and peaks around 0.003 s, Ib starts at about -8 A, Ic starts near 4.2 A. Bottom: "balanced Y (phase currents)", same y-range, I_phase1 (blue), I_phase2 (orange), I_phase3 (green), identical to the line currents because line current equals phase current in a Y load.](L07-fig1-balanced-y.png)
+
+_Figure 1: Line and phase current graphs for Y-connected, balanced case._
+
+![FIGURE PLACEHOLDER (L07 Figure 2). Two stacked matplotlib subplots over one 60 Hz cycle (0 to about 0.0167 s), with gridlines. Top: "balanced delta (line currents)", y-axis current (A), three equal sinusoids Ia (blue), Ib (orange), Ic (green), amplitude about 8 A, spaced 120° apart, the same shape as the balanced Y line currents. Bottom: "balanced delta (phase currents)", y-axis about -4.6 to 4.6 A, I_phase1 (blue), I_phase2 (orange), I_phase3 (green), equal amplitude of about 4.6 A (smaller than the line currents by a factor of about √3) and shifted about 30° earlier than the line currents; I_phase1 starts near 3.9 A and peaks around 0.0015 s. Legend on the right of the bottom plot.](L07-fig2-balanced-delta.png)
+
+_Figure 2: Line and phase current waveforms for delta-connected balanced case._
+
+## Unbalanced case
+
+In the unbalanced case, one of the loads is halved; other parameters are the same as the balanced case. The current waveform graphs are shown in Figure 3 (Y-connected) and Figure 4 (delta-connected). For the unbalanced case, the smallest impedance has the largest phase current. Waveforms have different magnitudes. This is expected because unbalanced phase results in unbalanced currents. We have assumed the neutral is grounded for the Y unbalanced load. Without grounding, there would be unequal phase voltages and more noticeable current imbalances.
+
+![FIGURE PLACEHOLDER (L07 Figure 3). Two stacked matplotlib subplots over one 60 Hz cycle (0 to about 0.0167 s), with gridlines, y-axis current (A) from -15 to 15. Top: "unbalanced Y (line currents)", Ia (blue) has double the amplitude, about 16 A (peaking near 0.003 s, trough near 0.011 s), while Ib (orange) and Ic (green) keep an amplitude of about 8 A, all still 120° apart. Bottom: "unbalanced Y (phase currents)", I_phase1 (blue, about 16 A), I_phase2 (orange) and I_phase3 (green, about 8 A each), identical to the line currents. Legends in the upper right.](L07-fig3-unbalanced-y.png)
+
+_Figure 3: Line and phase current waveforms for unbalanced Y-connected load._
+
+![FIGURE PLACEHOLDER (L07 Figure 4). Two stacked matplotlib subplots over one 60 Hz cycle (0 to about 0.0167 s), with gridlines. Top: "unbalanced delta load (line currents)", y-axis about -12 to 12 A; Ia (blue) and Ib (orange) both rise to about 12 A in amplitude while Ic (green) stays at about 8 A, and the phase spacing between Ia and Ib is no longer a symmetric 120°. Bottom: "unbalanced delta load (phase currents)", y-axis about -9 to 9 A; I_phase1 (blue) is about 9.2 A (doubled), while I_phase2 (orange) and I_phase3 (green) keep about 4.6 A. Legends at the right (top) and lower left (bottom).](L07-fig4-unbalanced-delta.png)
+
+_Figure 4: Line and phase current waveforms for unbalanced delta-connected load._
+
+## Line-to-line fault
+
+In the line-to-line fault, a tree branch creates a short between two lines (A and B). The power dissipated in the tree branch would be 43.264 kW (assuming V = 208 V<sub>rms</sub> and R = 1 Ω). The currents of A and B would be larger than the third line C, so there would be an imbalance in the generator.
+
+## Connection fault
+
+In the scenario where phases are swapped when connecting two synchronized generators, the system would be out of phase, and the voltages would be different. In the given circuit, resistor A dissipates 0 W, resistors B and C each dissipate 43.264 kW.
+
+## Summary
+
+Balanced 3-phase loads produce equal currents in all phases. When loads are unbalanced, currents have unequal magnitudes. Line-to-line faults cause large currents in the shorted phases which causes generator imbalance and possible damage. In a connection fault, the phases are no longer in sync which results in uneven power through each line.
