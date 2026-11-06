@@ -11,8 +11,10 @@ We found that such a plant would require one GE 6F.01 gas turbine to achieve a 5
 To reach the annual generation target of 438 GWh/year, we size the power plant at 51.97 MW which would be met with one GE 6F.01 turbine. We model the power plant using hourly dispatch logic in which power is dispatched at full capacity if revenue exceeds costs. Steam sales to the hospital are dependent on temperature modeled using Equation 1, and a maximum of 40% of thermal input can be delivered as steam.
 
 $$
-H_h = \max\big((70 - T_h) \cdot 10^5,\ 0\big)\ \text{MMBtu/hr} \tag{1}
+H_h = \max\big((70 - T_h) \cdot 10^5,\ 0\big) \qquad (1)
 $$
+
+where $H_h$ is in MMBtu/hr and $T_h$ is the outdoor temperature in °F.
 
 To model revenue, we use the following rates and assumptions:
 
