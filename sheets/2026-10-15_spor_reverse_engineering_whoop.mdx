@@ -1,0 +1,94 @@
+# Reverse Engineering: WHOOP
+
+WHOOP is a screenless health and fitness wearable. Most people wear it on the wrist, but the sensor can be worn anywhere on the body where it makes skin contact. For this reverse engineering project, I analyzed some of the software and hardware components of the device.
+
+## Market and Value Proposition
+
+WHOOP has about 2.5 million members/users and was valued at $10.1 billion in its March 2026 funding round. WHOOP uses monthly or yearly subscription model, and the hardware comes with it. The device doesn't work without an active membership.
+
+The value proposition is that there's no screen and no notifications, so it isn't a distraction. It tracks continuously, 24 hours a day and runs 14 days on a charge. The app uses proprietary formulas to calculate daily recovery, strain, and sleep scores using measured data.
+
+Its competitors include other screenless fitness bands (Fitbit, Garmin Cirqa, etc), the Oura Ring, and smartwatches from companies like Apple and Garmin that offer similar health/fitness tracking features.
+
+## Hardware and Software
+
+### How WHOOP Measures Heart Rate
+
+WHOOP measures heart rate with **photoplethysmography (PPG)**. The sensor on the underside of the strap has five LEDs and a set of photodiodes.
+
+- **Three green LEDs** measure heart rate and heart rate variability (HRV).
+- **A red and an infrared LED** measure blood oxygen saturation (SpO2).
+
+Green light shines into the skin, and blood absorbs it. Each heartbeat pushes more blood through the blood vessels under the sensor, so less light reflects back. The photodiodes convert that reflected light into an electrical signal which represents pulse.
+
+### Other Sensors
+
+- a **skin temperature sensor**
+- an **accelerometer and gyroscope** for activity and sleep tracking
+- EKG and blood pressure estimation on the MG model
+
+The device measures about 34 × 24 × 10 mm, weighs about 26.5 g, and is water resistant to 10m.
+
+### Teardown
+
+Components include of the band, the buckle, a two-piece enclosure, and the circuit boards inside. According to a TechInsights teardown of the WHOOP 5.0:
+
+- The **main board** holds an ARM Cortex-M4 microcontroller with built-in Bluetooth, flash memory, a six-axis accelerometer and gyroscope, power management chips, an LED driver, and a haptic (vibration) motor driver.
+- A **flexible board** holds the optical PPG and ECG front-end and the temperature sensor.
+
+### Software
+
+The formulas for calculating the sleep, recovery, strain scores are proprietary, but WHOOP's patents describe the general approach. For example, recovery is based largely on heart rate variability measured during the last phase of deep sleep before waking.
+
+## Materials
+
+WHOOP sells bands in several materials suited to different activities.
+
+## Connectivity
+
+The strap connects to a phone over Bluetooth Low Energy and displays data in the WHOOP app. If the phone is out of range, the device can store up to 14 days of unsynced data.
+
+## Sustainability
+
+Accessories are not cross-compatible between generations. WHOOP redesigned the band attachment for the 5.0, so 4.0 bands and chargers don't fit the new device.
+
+The subscription model creates waste. Subscriptoin model encourages people to replace hardware with upgrades. Because the strap only works with a paid membership, a fully functional device becomes waste when someone cancels.
+
+## Patents
+
+WHOOP has several patents. A few include:
+
+- The clasp, designed to make the band easier to don and doff
+- The wireless battery pack, which makes it possible to charge the device without taking it off.
+- Detecting sleep intention
+
+## Weaknesses
+
+### Wrist-based sensing struggles in some activities
+
+PPG depends on steady contact between the sensor and the skin. Activities that flex the wrist shift the strap and add noise to the signal. Cold weather also reduces accuracy due to less perfusion to the extremities. Wearing the sensor on the bicep or closer to the core can improve accuracy.
+
+### The scores are a black box
+
+Recovery and strain are calculated with a proprietary formula. If the underlying sensor signal is poor, users have no way to check whether the resulting score is reasonable.
+
+### Medical features carry real risk
+
+The EKG and blood pressure features on the WHOOP MG may cause unnecessary concern. A false reading could lead someone to make a harmful decision, like starting or stopping a medication. In July 2025, the FDA sent WHOOP a warning letter stating that it was marketing the blood pressure feature as a medical device without FDA clearance.
+
+## Recommended Improvements
+
+1. Make accessories (bands and chargers) compatible across generations
+2. Add a confidence indicator to the data. When the sensor signal is weak, the app should say so, rather than presenting a score with the same certainty
+
+## References
+
+- [TechInsights Teardown: WHOOP 5.0 (Electronics360)](https://electronics360.globalspec.com/article/23159/techinsights-teardown-whoop-5-0)
+- [Former Chief Technology Officer on Improved Accuracy & Design with WHOOP 4.0 (WHOOP)](https://www.whoop.com/thelocker/chief-technology-officer-whoop-4-0-accuracy/)
+- [WHOOP 5.0 and MG Specs (the5krunner)](https://the5krunner.com/specs/whoop/5-0-mg/)
+- [Whoop Raises $575 Million at $10.1 Billion Valuation (Yahoo Finance)](https://finance.yahoo.com/sectors/healthcare/articles/whoop-raises-575-million-10-204207038.html)
+- [WHOOP Company Profile (Sacra)](https://sacra.com/c/whoop/)
+- [US 9,743,848: Heart Rate Variability with Sleep Detection (Google Patents)](https://patents.google.com/patent/US9743848)
+- [4.0 Band Compatibility (WHOOP Community)](https://www.community.whoop.com/t/4-0-band-compatability/481)
+- [What to Do with the Sensor and Bands After Cancellation? (WHOOP Community)](https://www.community.whoop.com/t/what-to-do-with-the-sensor-and-bands-after-cancellation/13290)
+- [WHOOP Receives Warning Letter from FDA over Blood Pressure Insights (MobiHealthNews)](https://www.mobihealthnews.com/news/whoop-receives-warning-letter-fda-blood-pressure-insights)

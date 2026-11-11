@@ -1,0 +1,44 @@
+# Pedometer Teardown
+
+Materials used: screwdriver, hands
+
+## Product Description
+
+We present a pedometer with primary functions of counting and display steps, reset count, calculate/display approximate energy expenditure based on step count.
+
+- **Weight:** 1.5 oz
+- **Dimensions:** 2.4" × 2.1" × 0.98"
+- **Material:** ABS plastic case, PCB with LCD display, 3 tactile switches
+- **Unit retail price:** $3.22
+
+## Product Exploded View
+
+![FIGURE PLACEHOLDER (Pedometer exploded view). Photo collage of the disassembled pedometer on a white background, with hand-drawn black arrows and labels. Top left: the front case, with a blue bezel around a grey LCD window and three small grey buttons along the bottom edge printed RESET, SET, MODE (labeled "buttons"). Top right: the inside of the white front case, showing the bare rectangular LCD with a thin pink strip along its top edge, labeled "elastomeric connector — connects LCD to PCB". An arrow labeled "LCD" curves from the front window to the bare LCD. Bottom left: the white back case holding the green PCB (silkscreen "XHC-767", date code "20220515"). Labeled parts: "pendulum" (a metal arm with a coiled spring pivot running diagonally across the top of the board), "battery contact" (a coiled spring in a round recess at the centre of the board), and "IC" (a black epoxy blob chip in the upper right). Far right: the PCB pulled out and shown from the front, with the LCD contact row along the top and three round metal tactile switches along the bottom edge, labeled RESET, SET, MODE; a curved arrow links it to the elastomeric connector.](pedometer-exploded-view.png)
+
+## Force Flow Diagram
+
+![FIGURE PLACEHOLDER (Force flow diagram). Black-and-white box-and-arrow diagram with two parallel branches starting from a "user" box at the top. Left branch: user → (arrow labeled "force") → pendulum → (arrow labeled "electrical impulse") → IC → (arrow labeled "electrical impulse") → LCD. Right branch: user → (arrow labeled "force") → button → (arrow labeled "electrical impulse") → IC → (arrow labeled "electrical impulse") → LCD.](pedometer-force-flow-diagram.png)
+
+## Function Structure
+
+![FIGURE PLACEHOLDER (Function structure diagram). Black-and-white box-and-arrow diagram. Two inputs at the top: "vertical movement of device" points down into a "pendulum" box, and "user exerts force" points down into a "button" box. The pendulum's arrow to a central "IC" box is annotated "swings downward, makes contact with metal wire to complete a circuit". The button's arrow to the IC is annotated "electrical impulse along path which button is connected to IC". A "battery" box on the left sends an arrow labeled "energy" to the IC. The IC sends an arrow annotated "an action (ie. counter, change mode, reset)" down to a "display" box, which is captioned "output: result of action".](pedometer-function-structure.png)
+
+## Key Functions
+
+- **Detect steps, increment counter, display count**
+  - Could be improved by filtering false counts.
+  - Could be a useful mechanism for other products because it detects motion without using a lot of power. Can act as a switch or a counter.
+- **Calculate energy expenditure based on steps.**
+  - Could be improved by considering other factors such as speed, mass of user.
+- **Interface with 3 buttons:** reset, set, mode.
+
+## Solutions
+
+- **Step detection:** spring loaded pendulum that makes contact with metal wire to complete an electrical circuit that increments count. Count is displayed by LCD that is connected to PCB using elastomeric header.
+- **Energy expenditure:** To calculate energy expenditure, the step count is multiplied by some energy-cost-per-distance-unit constant.
+- **Buttons:** PCB has contacts for 3 tactile button switches for functions reset, set, and mode.
+
+## New Concepts
+
+- Device is not accurate because it may falsely count steps when moved, or miss steps if the device is not oriented in an ideal position. Using an accelerometer may improve the accuracy.
+- A tiny screwdriver is required to take apart the device. Tiny screws may be easily lost. A user may want to remove the back cover to replace the battery. One way to improve this would be to make the back cover snap-fit so it doesn't require screws.
